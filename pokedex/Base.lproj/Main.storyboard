@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Iun-B4-BWo"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ic9-jj-HzO">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ic9-jj-HzO">
                                 <rect key="frame" x="20" y="119" width="560" height="461"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="noz-eN-DKO">
@@ -60,7 +60,7 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.11694606759999999" green="0.94022005890000004" blue="0.067488911540000002" alpha="0.68176185344827589" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69967672413793103" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="LHL-1Q-uTL" secondAttribute="trailing" id="D0V-wF-dlM"/>
                                             <constraint firstAttribute="bottom" secondItem="LHL-1Q-uTL" secondAttribute="bottom" id="IsD-jE-bHV"/>
