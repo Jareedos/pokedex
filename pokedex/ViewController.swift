@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell {
             
-            let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row)
+            let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row + 1)
             cell.configureCell(pokemon)
             return cell
         
