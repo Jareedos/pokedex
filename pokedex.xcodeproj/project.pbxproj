@@ -66,8 +66,8 @@
 				BF49F1FC1D13711A00353752 /* View */,
 				BF49F2021D137B6D00353752 /* Controller */,
 				BF49F2011D137B3E00353752 /* Util */,
+				BF49F2031D149E0600353752 /* Resources */,
 				BF49F1E51D1228AD00353752 /* AppDelegate.swift */,
-				BF49F1F71D132AA300353752 /* pokemon.csv */,
 				BF49F1EC1D1228AD00353752 /* Assets.xcassets */,
 				BF49F1EE1D1228AD00353752 /* LaunchScreen.storyboard */,
 				BF49F1F11D1228AD00353752 /* Info.plist */,
@@ -106,6 +106,14 @@
 				BF49F1E71D1228AD00353752 /* ViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BF49F2031D149E0600353752 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF49F1F71D132AA300353752 /* pokemon.csv */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
