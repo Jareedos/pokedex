@@ -111,6 +111,7 @@
                                         <connections>
                                             <outlet property="nameLbl" destination="LHL-1Q-uTL" id="Jof-wI-U7z"/>
                                             <outlet property="thumbImg" destination="D2A-fV-hME" id="hac-KM-cnZ"/>
+                                            <segue destination="A2P-IG-i4G" kind="show" identifier="PokemonDetailVC" id="KwR-Dd-bux"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -155,7 +156,25 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="57" y="320"/>
+            <point key="canvasLocation" x="113" y="219"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="SNg-bL-CKO">
+            <objects>
+                <viewController id="A2P-IG-i4G" customClass="PokemonDetailVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c86-o7-Sg8"/>
+                        <viewControllerLayoutGuide type="bottom" id="st8-rJ-4OX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gf3-Jc-z1V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5L-sN-F3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="219"/>
         </scene>
     </scenes>
     <resources>
