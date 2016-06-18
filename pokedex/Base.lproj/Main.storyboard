@@ -111,7 +111,6 @@
                                         <connections>
                                             <outlet property="nameLbl" destination="LHL-1Q-uTL" id="Jof-wI-U7z"/>
                                             <outlet property="thumbImg" destination="D2A-fV-hME" id="hac-KM-cnZ"/>
-                                            <segue destination="A2P-IG-i4G" kind="show" identifier="PokemonDetailVC" id="KwR-Dd-bux"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,6 +147,7 @@
                     <connections>
                         <outlet property="collection" destination="ic9-jj-HzO" id="xn3-6j-gH1"/>
                         <outlet property="searchBar" destination="cvd-DK-X30" id="80G-v5-nex"/>
+                        <segue destination="A2P-IG-i4G" kind="show" identifier="PokemonDetailVC" id="pRy-54-APL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,8 +169,23 @@
                     <view key="view" contentMode="scaleToFill" id="Gf3-Jc-z1V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et4-gp-KkI">
+                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="et4-gp-KkI" firstAttribute="centerY" secondItem="Gf3-Jc-z1V" secondAttribute="centerY" id="BfU-H5-51h"/>
+                            <constraint firstItem="et4-gp-KkI" firstAttribute="centerX" secondItem="Gf3-Jc-z1V" secondAttribute="centerX" id="FrU-Y3-JtN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="et4-gp-KkI" id="5ik-LU-6la"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5L-sN-F3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
