@@ -170,17 +170,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et4-gp-KkI">
-                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-D3-BHQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et4-gp-KkI">
+                                        <rect key="frame" x="177" y="13" width="247" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SUu-5I-AgN"/>
+                                            <constraint firstAttribute="width" constant="247" id="iY0-uJ-KMy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0u-2H-yzp">
+                                        <rect key="frame" x="8" y="16" width="35" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="HWF-JT-f4V"/>
+                                            <constraint firstAttribute="height" constant="24" id="W1e-Eo-JZe"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="DRT-nN-C68"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z0u-2H-yzp" secondAttribute="bottom" constant="15" id="SzB-LP-4Jh"/>
+                                    <constraint firstItem="Z0u-2H-yzp" firstAttribute="leading" secondItem="bcq-D3-BHQ" secondAttribute="leading" constant="8" id="bhA-vc-d93"/>
+                                    <constraint firstItem="et4-gp-KkI" firstAttribute="centerY" secondItem="bcq-D3-BHQ" secondAttribute="centerY" id="fJO-IW-lr6"/>
+                                    <constraint firstItem="et4-gp-KkI" firstAttribute="centerY" secondItem="bcq-D3-BHQ" secondAttribute="centerY" id="o6W-d5-ax9"/>
+                                    <constraint firstItem="et4-gp-KkI" firstAttribute="centerX" secondItem="bcq-D3-BHQ" secondAttribute="centerX" id="wmF-eZ-rFo"/>
+                                    <constraint firstItem="et4-gp-KkI" firstAttribute="centerX" secondItem="bcq-D3-BHQ" secondAttribute="centerX" id="yR0-91-ECI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fJO-IW-lr6"/>
+                                        <exclude reference="yR0-91-ECI"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l9p-oe-sX2">
+                                <rect key="frame" x="20" y="70" width="560" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uzv-W1-du3">
+                                <rect key="frame" x="20" y="122" width="114" height="114"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="et4-gp-KkI" firstAttribute="centerY" secondItem="Gf3-Jc-z1V" secondAttribute="centerY" id="BfU-H5-51h"/>
-                            <constraint firstItem="et4-gp-KkI" firstAttribute="centerX" secondItem="Gf3-Jc-z1V" secondAttribute="centerX" id="FrU-Y3-JtN"/>
+                            <constraint firstItem="bcq-D3-BHQ" firstAttribute="centerY" secondItem="Gf3-Jc-z1V" secondAttribute="centerY" constant="-272.5" id="7WN-jB-dCM"/>
+                            <constraint firstItem="bcq-D3-BHQ" firstAttribute="centerX" secondItem="Gf3-Jc-z1V" secondAttribute="centerX" id="NsW-mk-Z8D"/>
+                            <constraint firstItem="bcq-D3-BHQ" firstAttribute="centerY" secondItem="Gf3-Jc-z1V" secondAttribute="centerY" constant="-272.5" id="QcP-CB-Tda"/>
+                            <constraint firstItem="bcq-D3-BHQ" firstAttribute="centerX" secondItem="Gf3-Jc-z1V" secondAttribute="centerX" id="ZzC-Hj-Deq"/>
+                            <constraint firstItem="bcq-D3-BHQ" firstAttribute="leading" secondItem="Gf3-Jc-z1V" secondAttribute="leading" id="hEe-WL-WL9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -189,11 +236,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5L-sN-F3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="219"/>
+            <point key="canvasLocation" x="807" y="266"/>
         </scene>
     </scenes>
     <resources>
         <image name="297" width="120" height="120"/>
+        <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>
     </resources>
