@@ -34,11 +34,23 @@ class Pokemon {
         self._name = name
         self._pokedexId = pokedexId
         
-        _pokemonUrl = "(URL_BASE)\(URL_POKEMON)\(self._pokedexId)/"
+        _pokemonUrl = "\(URL_BASE)\(URL_POKEMON)\(self._pokedexId)/"
         
     }
         
     func downloadPokemonDetails(completed: DownloadComplete) {
+        
+        let url = NSURL(string: _pokemonUrl)!
+        Alamofire.request(.GET, url).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
         
     }
 }

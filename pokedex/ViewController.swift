@@ -57,8 +57,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let poke = Pokemon(name: name, pokedexId: pokeId)
                 pokemon.append(poke)
             }
-            
-            print(rows)
        
         } catch let err as NSError {
             print(err.debugDescription)
