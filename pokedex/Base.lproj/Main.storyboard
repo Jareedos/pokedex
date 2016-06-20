@@ -193,6 +193,9 @@
                                             <constraint firstAttribute="height" constant="24" id="W1e-Eo-JZe"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="A2P-IG-i4G" eventType="touchUpInside" id="W1y-r6-scU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -250,7 +253,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gZB-eu-5aG">
                                         <rect key="frame" x="0.0" y="207" width="560" height="22"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tS-vM-gLs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tS-vM-gLs">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="143" id="LK9-TH-C8D"/>
@@ -259,7 +262,7 @@
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ivy/Ice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlI-sH-4XG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ivy/Ice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlI-sH-4XG">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="122" id="Vx1-49-ULS"/>
@@ -268,13 +271,13 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6E-Vw-TSn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6E-Vw-TSn">
                                                 <rect key="frame" x="280" y="0.0" width="140" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-i0-abf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-i0-abf">
                                                 <rect key="frame" x="420" y="0.0" width="140" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="71" id="gyt-TT-BOG"/>
@@ -447,12 +450,21 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentEvoImg" destination="oL5-iT-fgu" id="DJa-gh-Onh"/>
+                        <outlet property="defenseLbl" destination="eCJ-i0-abf" id="8t7-6C-fKz"/>
+                        <outlet property="descrptionLbl" destination="4Ta-Oq-B8q" id="mvC-2o-n0D"/>
+                        <outlet property="evoLbl" destination="fpZ-41-yWC" id="D1r-q2-4Cj"/>
+                        <outlet property="heightLbl" destination="o9I-Mj-7mf" id="TRg-eZ-Uco"/>
+                        <outlet property="mainImg" destination="Uzv-W1-du3" id="LWn-vm-NVd"/>
                         <outlet property="nameLbl" destination="et4-gp-KkI" id="5ik-LU-6la"/>
+                        <outlet property="nextEvoImg" destination="CMa-KN-2A1" id="gqu-6q-cPu"/>
+                        <outlet property="pokedexLbl" destination="QQ0-Qg-3t2" id="lEZ-MC-8Oa"/>
+                        <outlet property="typeLbl" destination="ZlI-sH-4XG" id="Wum-mi-FOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5L-sN-F3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="192"/>
+            <point key="canvasLocation" x="751" y="165"/>
         </scene>
     </scenes>
     <resources>
