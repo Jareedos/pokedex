@@ -42,13 +42,33 @@ class Pokemon {
         
         let url = NSURL(string: _pokemonUrl)!
         Alamofire.request(.GET, url).responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
+//            print(response.request)  // original URL request
+//            print(response.response) // URL response
+//            print(response.data)     // server data
+//            print(response.result)   // result of response serialization
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+            if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                
+                if let weight = dict["weight"] as? String {
+                    self._weight = weight
+                }
+                
+                if let height = dict["height"] as? String {
+                    self._height = height
+                }
+                
+                if let attack = dict["attack"] as? Int {
+                    self._attack = "\(attack)"
+                }
+                
+                if let defense = dict["defense"] as? Int {
+                    self._defense = "\(defense)"
+                }
+                
+                print(self._weight)
+                print(self._height)
+                print(self._attack)
+                print(self._defense)
             }
         }
         
