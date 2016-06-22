@@ -85,8 +85,6 @@ class Pokemon {
                     self._type = ""
                 }
                 
-                print(self._type)
-                
                 if let descArr = dict["descriptions"] as? [Dictionary<String, String>] where descArr.count > 0 {
                     
                     if let url = descArr[0]["resource_uri"] {
