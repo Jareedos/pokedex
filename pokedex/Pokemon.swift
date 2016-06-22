@@ -65,10 +65,25 @@ class Pokemon {
                     self._defense = "\(defense)"
                 }
                 
-                print(self._weight)
-                print(self._height)
-                print(self._attack)
-                print(self._defense)
+                if let types = dict["types"] as? [Dictionary<String, String>] where types.count > 0 {
+                    if let name = types[0]["name"] {
+                        self._type = name.capitalizedString
+                    }
+                    
+                    if types.count > 1 {
+                        var counter = 1
+                        while types.count > counter {
+                            if let name = types[counter]["name"] {
+                                self._type! += "/\(name.capitalizedString)"
+                            }
+                            counter += 1
+                        }
+                    }
+                } else {
+                    self._type = ""
+                }
+                
+                print(self._type)
             }
         }
         
