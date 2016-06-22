@@ -31,10 +31,17 @@ class PokemonDetailVC: UIViewController {
         
         pokemon.downloadPokemonDetails { () -> () in
             //this is called after the download is done
+            self.updateUI()
         }
         
     }
-
+    
+    func updateUI() {
+        if let description = pokemon.description {
+            descriptionLbl.text = description
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
