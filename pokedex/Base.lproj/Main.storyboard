@@ -470,6 +470,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="baseAttack" destination="FVB-mq-Xep" id="OJh-W4-tE1"/>
                         <outlet property="currentEvoImg" destination="oL5-iT-fgu" id="DJa-gh-Onh"/>
                         <outlet property="defenseLbl" destination="eCJ-i0-abf" id="8t7-6C-fKz"/>
                         <outlet property="descrptionLbl" destination="4Ta-Oq-B8q" id="mvC-2o-n0D"/>
@@ -480,11 +481,12 @@
                         <outlet property="nextEvoImg" destination="CMa-KN-2A1" id="gqu-6q-cPu"/>
                         <outlet property="pokedexLbl" destination="QQ0-Qg-3t2" id="lEZ-MC-8Oa"/>
                         <outlet property="typeLbl" destination="ZlI-sH-4XG" id="Wum-mi-FOg"/>
+                        <outlet property="weightLbl" destination="AHI-ex-5NT" id="0KR-Xy-1HX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5L-sN-F3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="165"/>
+            <point key="canvasLocation" x="815" y="128"/>
         </scene>
     </scenes>
     <resources>
