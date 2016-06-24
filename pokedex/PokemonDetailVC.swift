@@ -26,8 +26,10 @@ class PokemonDetailVC: UIViewController {
     var pokemon: Pokemon!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        super.viewDidLoad()        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         nameLbl.text = pokemon.name.capitalizedString
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
@@ -62,12 +64,7 @@ class PokemonDetailVC: UIViewController {
             }
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  
     @IBAction func backBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
