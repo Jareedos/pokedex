@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+
 
 class PokemonDetailVC: UIViewController {
     
@@ -26,7 +28,7 @@ class PokemonDetailVC: UIViewController {
     var pokemon: Pokemon!
 
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -34,6 +36,8 @@ class PokemonDetailVC: UIViewController {
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
         currentEvoImg.image = img
+        SVProgressHUD.showWithStatus("Loading...")
+        
         
         pokemon.downloadPokemonDetails { () -> () in
             //this is called after the download is done
