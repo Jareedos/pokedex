@@ -29,6 +29,7 @@ class PokemonDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -37,13 +38,10 @@ class PokemonDetailVC: UIViewController {
         mainImg.image = img
         currentEvoImg.image = img
         SVProgressHUD.showWithStatus("Loading...")
-        
-        
-        pokemon.downloadPokemonDetails { () -> () in
-            //this is called after the download is done
-            self.updateUI()
-        }
-        
+            pokemon.downloadPokemonDetails { () -> () in
+                //this is called after the download is done
+                self.updateUI()
+            }
     }
     
     func updateUI() {

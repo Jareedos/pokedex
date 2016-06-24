@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SVProgressHUD
 
 
 class Pokemon {
@@ -168,6 +169,7 @@ class Pokemon {
                             }
                             
                             completed()
+                            SVProgressHUD.dismiss()
                         }
                     }
                 
@@ -198,6 +200,7 @@ class Pokemon {
                                 print(self._nextEvolutionLvl)
                                 print(self._nextEvolutionTxt)
                                 print(self._nextEvolutionId)
+//                                SVProgressHUD.dismiss()
                              }
                         }
                     }
