@@ -28,7 +28,7 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalizedString
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
         currentEvoImg.image = img
@@ -50,7 +50,7 @@ class PokemonDetailVC: UIViewController {
         baseAttack.text = pokemon.attack
         
         if pokemon.nextEvolutionId == "" {
-            evoLbl.text = "NO Evolutions"
+            evoLbl.text = "No Evolutions"
             nextEvoImg.hidden = true
         } else {
             nextEvoImg.hidden = false
