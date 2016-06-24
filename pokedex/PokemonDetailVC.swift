@@ -38,7 +38,9 @@ class PokemonDetailVC: UIViewController {
         mainImg.image = img
         currentEvoImg.image = img
         SVProgressHUD.showWithStatus("Loading...")
-            pokemon.downloadPokemonDetails { () -> () in
+        
+        
+        pokemon.downloadPokemonDetails { () -> () in
                 //this is called after the download is done
                 self.updateUI()
             }

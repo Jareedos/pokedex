@@ -110,10 +110,6 @@ class Pokemon {
         
         let url = NSURL(string: _pokemonUrl)!
         Alamofire.request(.GET, url).responseJSON { response in
-//            print(response.request)  // original URL request
-//            print(response.response) // URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
             
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
                 
@@ -154,7 +150,6 @@ class Pokemon {
                 if let descArr = dict["descriptions"] as? [Dictionary<String, String>] where descArr.count > 0 {
                     
                     if let url = descArr[0]["resource_uri"] {
-                        //print(url)
                         let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
                         
                         Alamofire.request(.GET, nsurl).responseJSON { response in
@@ -164,7 +159,6 @@ class Pokemon {
                                 
                                 if let description = descDict["description"] as? String {
                                     self._description = description
-                                    print(self._description)
                                 }
                             }
                             
@@ -196,11 +190,6 @@ class Pokemon {
                                 if let lvl = evolutions[0]["level"] as? Int {
                                     self._nextEvolutionLvl = "\(lvl)"
                                 }
-                                
-                                print(self._nextEvolutionLvl)
-                                print(self._nextEvolutionTxt)
-                                print(self._nextEvolutionId)
-//                                SVProgressHUD.dismiss()
                              }
                         }
                     }
